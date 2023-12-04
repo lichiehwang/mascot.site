@@ -1,53 +1,124 @@
-
-html{
-    font-size: 10px;
-    font-family: sans-serif;
-    background-color: #b8d8f3; 
+*{
+    padding:0;
+    margin:0;
 }
-
+html {
+font-size: 12px;
+font-family: sans-serif;
+background-color: #8bbee9;
+}
 #header{
-    background-color: #8bbee9;
-    position:relative;
-    height:2500px;
-     
+    padding-bottom: 20%;
 }
-.topword{
-   writing-mode: vertical-rl; 
-   text-align: top;
-   float: right;
-   margin-top: -40%;
-   font-size: 2.5rem;
-   color:white;
-   margin-right: 25%;
-   line-height: 2.2;
-   text-decoration: underline #008ad5 40px ;
-   text-underline-offset: -2rem;
-   font-family: 	'ヒラギノ角ゴシック';
-}
-
-.rainbow{
-    max-width: 80%;
-    margin:100px auto;
-  text-align: center;
-}
-
-.more2{
+.fadeIn{
+    animation-name:fadeInAnime;
+    animation-duration:2s;
+    animation-fill-mode:forwards;
+    opacity:0;
+    }
     
-    position:absolute;
-    top:2300px;
-   right:300px;
-}
-.more2:hover{
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-}
-.more3{
-    padding-top: 200px;
-    float: right;  
-}
-#main {
+    @keyframes fadeInAnime{
+      from {
+        opacity: 0;
+      }
+    
+      to {
+        opacity: 1;
+      }
+    }
+    .fadeLeft{
+        animation-name:fadeLeftAnime;
+        animation-duration:1.5s;
+        animation-fill-mode:forwards;
+        opacity:0;
+        }
+        
+        @keyframes fadeLeftAnime{
+          from {
+            opacity: 0;
+            transform: translateX(-100px);
+          }
+        
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        .main{
+            text-align: center;
+        }
+        .main img{
+            width:80%;
+        }
+        .topword{
+            writing-mode: vertical-rl; 
+            text-align: top;
+            float: right;
+            margin-top: -30%;
+            font-size: 2.5rem;
+            color:white;
+            margin-right: 20%;
+            line-height: 2.2;
+            text-decoration: underline #008ad5 40px ;
+            text-underline-offset: -2.5rem;
+            font-family: 	'ヒラギノ角ゴシック';
+            letter-spacing: 0.3rem;
+         }
+         .fly{
+            margin-top: 5%;
+         }
+         .fly img{
+          max-width:40%;
+         }
+
+         .fadeUp{
+            animation-name:fadeUpAnime;
+            animation-duration:2.5s;
+            animation-fill-mode:forwards;
+            opacity:0;
+            }
+            
+            @keyframes fadeUpAnime{
+              from {
+                opacity: 0;
+                transform: translateY(100px);
+              }
+            
+              to {
+                opacity: 1;
+                transform: translateY(0);
+              }
+            }
+.rainbow img{
+width:80%;
+padding-top: 100px;
+
+}  
+.rainbow {
+    text-align: center; 
+} 
+.more2{
+    float:right;
+    margin-right: 25%;
+}  
+ .more2:hover{
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+
+#line{
     background-color: white;
-    position:relative;
-   
+    background-image: url(../img/lineback.png);
+    background-size: cover;
+    background-position: center;
+    height:1250px;
+}
+.phone {
+    padding-top:200px;
+    text-align: center;
+}
+.phone img{
+    width:50%;
 }
 #main1{
     background-color:white; 
@@ -67,87 +138,30 @@ html{
     text-align: center;
  
 }
-.wallpaper{
-    z-index: -30;;
+.big{
+    margin:0 auto;
 }
-.p1 {
-    position: absolute;
-    left:10px;
-    top:50px;
-   
+.big img{
+    max-width: 30%;
 }
-.p2{
-    position: absolute;
-    left:100px;
-    top:350px; 
-}
-.p3{
-    position: absolute;
-    left:10px;
-    top:650px; 
-}
-.p4{
-    position: absolute;
-    left:100px;
-    top:950px; 
-}
-.p5 {
-    position: absolute;
-    right:10px;
-    top:50px;
-   
-}
-.p6{
-    position: absolute;
-    right:100px;
-    top:350px; 
-}
-.p7{
-    position: absolute;
-    right:10px;
-    top:650px; 
-}
-.p8{
-    position: absolute;
-    right:100px;
-    top:950px; 
-}
-.line, .phone {
-    padding-top:50px;
-    text-align: center;
-}
+.big img:hover{transform:scale(1.2,1.2);}
 
-.main{
-    padding-top:40px ;
-   
-     max-width:80%;
-     margin:0px auto;
-}
-.fly{
-    max-width:60%;
-  margin-top: 100px;
-    text-align: left;
-}
-.wall{
-    text-align: center;
-    margin:80px;
-}
 #main2{
     background-color: #8bbee9; 
     position:relative;
-
 }
 
 .audio{
     text-align: center;
-    padding:10px;
+    padding:50px;
 }
 .sing{
     position:absolute;
     left:0;
     top:100px;
-    
-
+}
+.sing img{
+    width:50%;
 }
 .song{
     
@@ -159,8 +173,11 @@ html{
 .lyric{
     text-align: center;
     margin:0 auto;
-  max-width: 60%;
-  padding-bottom: 400px;
+
+  padding-bottom: 500px;
+}
+.lyric img{
+    max-width: 60%;
 }
 .shadow1{
     position:absolute;
@@ -179,10 +196,7 @@ html{
    
 }
 .hyogo{padding:50px;}
-.big{
-    margin:0 auto;
-}
-.big img:hover{transform:scale(1.2,1.2);}
+
 .fb{
     position: absolute;
     right:100px;
